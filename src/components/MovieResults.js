@@ -1,21 +1,20 @@
 import React from 'react';
+import NominateBtn from './NominateBtn';
 
-const MovieResults = (props) => {
-	// const FavouriteComponent = props.favouriteComponent;
-
+function MovieResults(props) {
 	return (
 		<>
-			{props.movies.map((movie, index) => (
+			{props.movies.map((movie) => (
 				<div>
 					<div className='image-container d-flex justify-content-start m-3'>
 					<img src={movie.Poster} alt='movie'></img>
 					
-					{/* <div
-						onClick={() => props.handleFavouritesClick(movie)}
-						className='overlay d-flex align-items-center justify-content-center'
+					<div
+						onClick={() => props.handlenominateClick(movie)}
+						className='d-flex align-items-center justify-content-center'
 					>
-						{/* <FavouriteComponent /> 
-					</div> */}
+						{<NominateBtn />}
+					</div>
 				</div>
 				<div>
 				<h4>{movie.Title}</h4>
