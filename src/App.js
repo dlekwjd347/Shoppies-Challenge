@@ -14,7 +14,7 @@ function App() {
 
 
   const getMovieRequest = async (searchValue) => {
-		const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=762eb5d3`;
+		const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=762eb5d3`;
 
 		const response = await fetch(url);
 		const responseJson = await response.json();
@@ -52,15 +52,16 @@ function App() {
 				<MovieResultsHeading heading='Movies' />
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 			</div>
-			<div className='row'>
+			<div className='row resultsbody'>
 				<MovieResults
 					movies={movies}
 					handlenominateClick={addNominatedMovie}
 					NominateBtnComponent={NominateBtn}
 				/>
+				
 			</div>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
-				<MovieResultsHeading heading='Nominees' />
+				{/* <MovieResultsHeading heading='Nominees' /> */}
 			</div>
 			<div className='row'>
 				<MovieResults
@@ -70,6 +71,7 @@ function App() {
 			</div>
 		</div>
   );
+
 }
 
 export default App;

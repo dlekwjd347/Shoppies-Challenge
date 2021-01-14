@@ -1,8 +1,8 @@
 import React from 'react';
 
-function NominateBtn(props) {
+function NominateBtn() {
     return (
-        <button type="button" class="btn btn-warning">Nominate</button>
+        <button type="button" className="btn btn-warning nominateBtn">NOMINATE</button>
     )
 };
 
