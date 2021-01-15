@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import NominateBtn from './NominateBtn';
+import 
 
 function MovieResults(props) {
+
+
 	return (
 		<>
 			{props.movies.map((movie) => (
