@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MovieResultsHeading (props) {
+function ShoppiesHeading (props) {
 	return (
 		<div className='col'>
 			<h1>{props.heading}</h1>
@@ -8,4 +8,4 @@ function MovieResultsHeading (props) {
 	);
 };
 
-export default MovieResultsHeading;
+export default ShoppiesHeading;

@@ -1,7 +1,7 @@
 
 body {
   background: #141414;
-  color: #BCF4F5;
+  color: #9BF3F0;
   font-family: 'Nunito', sans-serif;
   
 }
@@ -18,7 +18,7 @@ body {
 }
 
 .movieBox {
-	margin: 50px;
+	margin: 30px;
 }
 
 /* .overlay {
@@ -51,15 +51,17 @@ h4, h5 {
 	border: 0;
 	outline: 0;
 	background: transparent;
-	border-bottom: 3px solid #BCF4F5;
+	border-bottom: 3px solid #9BF3F0;
 	color: white;
-	justify-content: right;
+	width: 250px;
 }
 
 .nominateBtn {
 	border-radius: 30px;
+	background-color: #ecaa3c;
 
 }
+
 /* label {
 	position: relative;
 }
@@ -76,3 +78,11 @@ label:before {
   input {
 	padding: 10px 30px;
   } */
+
+img {
+	height: 250px;
+}
+
+.awardpic {
+	height: 200px;
+}

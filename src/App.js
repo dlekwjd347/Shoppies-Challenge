@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MovieResults from './components/MovieResults';
-import MovieResultsHeading from './components/MovieResultsHeading';
+import ShoppiesHeading from './components/ShoppiesHeading';
 import SearchBox from './components/SearchBox';
 import NominateBtn from './components/NominateBtn';
 
@@ -49,8 +49,12 @@ function App() {
   return (
     <div className='container-fluid'>
 			<div className='row d-flex align-items-center mt-4 mb-4 moviesHeading'>
-				<MovieResultsHeading heading='Movies' />
+				<ShoppiesHeading heading='The Shoppies' /> 
+				{/* <img className="awardpic" src="https://media.giphy.com/media/6IdTznDpTGYPjFJBOl/giphy.gif"></img> */}
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+			</div>
+			<div>
+				
 			</div>
 			<div className='row resultsbody'>
 				<MovieResults
