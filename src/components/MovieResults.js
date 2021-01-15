@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import NominateBtn from './NominateBtn';
-import 
 
 function MovieResults(props) {
 

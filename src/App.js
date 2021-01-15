@@ -5,6 +5,9 @@ import MovieResults from './components/MovieResults';
 import ShoppiesHeading from './components/ShoppiesHeading';
 import SearchBox from './components/SearchBox';
 import NominateBtn from './components/NominateBtn';
+import Results from './pages/Results';
+import SearchContext from './utils/SearchContext';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
 
@@ -47,6 +50,15 @@ function App() {
 	};
 
   return (
+	  <Router>
+		   <SearchContext.Provider
+        value={{
+			searchValue,
+			setSearchValue
+        }}
+      ></SearchContext.Provider>
+	 
+
     <div className='container-fluid'>
 			<div className='row d-flex align-items-center mt-4 mb-4 moviesHeading'>
 				<ShoppiesHeading heading='The Shoppies' /> 
@@ -75,7 +87,9 @@ function App() {
 			</div>
 		</div>
   );
-
+  <Route exact path="/Results"></Route>
+  </Router>
+  )
 }
 
 export default App;
