@@ -15,7 +15,6 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const [nominees, setNominees] = useState([]);
 
-
   const getMovieRequest = async (searchValue) => {
 		const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=762eb5d3`;
 
@@ -60,13 +59,15 @@ function App() {
 			<div>
 				
 			</div>
-			<div className='row resultsbody'>
+			<div className='row'>
+			
 				<MovieResults
 					movies={movies}
 					handlenominateClick={addNominatedMovie}
 					NominateBtnComponent={NominateBtn}
-					RemoveBtnComponent={RemoveBtn}
+					
 				/>
+			
 			</div>
 			<div className='row d-flex mt-4 mb-4'>
 			<MovieResults
@@ -74,7 +75,8 @@ function App() {
 				/>
 			<div className='row'>
 			<ShoppiesHeading heading='Nominees' />
-				<AllNominatedMovies />
+				<AllNominatedMovies 
+				RemoveBtnComponent={RemoveBtn}/>
 			</div>
 			
 

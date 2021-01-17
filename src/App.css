@@ -1,7 +1,7 @@
 
 body {
-  background: #141414;
-  color: #9BF3F0;
+  background: white;
+  color: black;
   font-family: 'Nunito', sans-serif;
   
 }
@@ -17,25 +17,13 @@ body {
 	
 }
 
-.resultsbody > .movieBox {
+.resultsbody  {
 	overflow-x: auto;
 	flex-wrap: nowrap;
-}
-
-/* .overlay {
-	position: absolute;
-	background: rgba(0, 0, 0, 0.8);
-	width: 100%;
-	transition: 0.5s ease;
-	opacity: 0;
-	bottom: 0;
-	font-size: 20px;
-	padding: 20px;
-	text-align: center;
-} */
+} 
 
 h4, h5 {
-  color: #ffffff;
+  color: black;
 }
 
 .moviesHeading {
@@ -46,14 +34,14 @@ h4, h5 {
 	border: 0;
 	outline: 0;
 	background: transparent;
-	border-bottom: 3px solid #9BF3F0;
-	color: white;
+	border-bottom: 3px solid black;
+	color: black;
 	width: 250px;
 }
 
 .nominateBtn {
 	border-radius: 30px;
-	background-color: white;
+	background-color:#9BF3F0;
 
 }
 
@@ -101,3 +89,4 @@ img {
 	border-color: white;
 	border-width: 20px;
 }
+
