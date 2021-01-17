@@ -26,34 +26,22 @@ function NominateBtn(props) {
 		console.log(responseJson);
 
   };
-    const notifyAdd = () => toast("Movie Successfully Added to Nominations!");
-
-    const addMovieRequest = async () => {
-        console.log(props.movieTitle);
-        await getMovieRequest(props.movieTitle).then((data) => {
-          console.log(data);
-          return notifyAdd();
-        });
-      };
       
 
     return (
         <div>
             <button type="button" id="nomBtn" className="btn btn-light nominateBtn"
                 onClick={() => {
-                    if (linearSearch(props.selectedMovie, props.movieTitle) ) { //if search is unsuccessful 
+                    if (linearSearch(props.selectedMovie, props.movieTitle) !== -1) { //if search is unsuccessful 
                         props.dispatch({
                             type: "NOM_MOVIE", //allow nominate movie button clickable
                             payload: props.movieTitle
                         });
                     }
-                    return (<ToastContainer
-                        position="bottom-right"
-                        
-                        />);
+                    return (alert());
                 } 
                 
-                } disabled={linearSearch(props.selectedMovie, props.movieTitle) !== -1}>NOMINATE</button>
+                } disabled={linearSearch(props.selectedMovie, props.movieTitle) }>NOMINATE</button>
         </div>
 
     )

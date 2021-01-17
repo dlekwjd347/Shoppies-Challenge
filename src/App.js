@@ -6,7 +6,7 @@ import ShoppiesHeading from './components/ShoppiesHeading';
 import SearchBox from './components/SearchBox';
 import NominateBtn from './components/NominateBtn';
 import RemoveBtn from './components/RemoveBtn';
-import allNominatedMovies from './components/NominatedMovies'
+import AllNominatedMovies from './components/AllNominatedMovies';
 
 function App() {
 
@@ -65,17 +65,13 @@ function App() {
 					NominateBtnComponent={NominateBtn}
 					RemoveBtnComponent={RemoveBtn}
 				/>
-				
 			</div>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
-				<ShoppiesHeading heading='Nominees' />
-				<MovieResults
+			<MovieResults
 					movies={nominees}
-					
 				/>
-			</div>
-			<div className='row'>
-				
+			<ShoppiesHeading heading='Nominees' />
+				<AllNominatedMovies AllNominatedMovies={AllNominatedMovies} />
 			</div>
 		</div>
   );
