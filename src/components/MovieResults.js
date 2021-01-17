@@ -13,11 +13,11 @@ function MovieResults(props) {
 								<img src={movie.Poster} alt='movie'></img>
 							</div>
 							<div >
-								<div >
+								<div className='movieInfo'>
 								<h4>{movie.Title}</h4>
 								<p>{movie.Year}</p>
 								</div>
-								<div className='row'>
+								<div className='row btncenter'>
 								{<NominateBtn movie={movie} />}
 								</div>
 							</div>

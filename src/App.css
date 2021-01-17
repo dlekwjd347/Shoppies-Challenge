@@ -42,7 +42,7 @@ h4, h5 {
 .nominateBtn {
 	border-radius: 30px;
 	background-color:#9BF3F0;
-
+	
 }
 
 .nominateBtn:hover {
@@ -90,3 +90,18 @@ img {
 	border-width: 20px;
 }
 
+.movieInfo {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.movieBox {
+	margin: 5px;
+	
+}
+
+.btncenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
