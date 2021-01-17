@@ -58,8 +58,23 @@ h4, h5 {
 
 .nominateBtn {
 	border-radius: 30px;
-	background-color: #ecaa3c;
+	background-color: white;
 
+}
+
+.nominateBtn:hover {
+	background-color: #0080ff
+}
+
+.removeBtn {
+	border-radius: 30px;
+	background-color: tomato;
+}
+
+.removeBtn:active {
+	background-color: tomato;
+	box-shadow: 0 5px rgb(71, 66, 66);
+	transform: translateY(4px);
 }
 
 /* label {
