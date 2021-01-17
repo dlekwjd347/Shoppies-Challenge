@@ -1,25 +1,50 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 
 
 function NominateBtn(props) {
     console.log("nominate button is clicked!", props.movieTitle);
-  
+
+    //linear seach to determine if target is in selectedMovies array 
+    function linearSearch(selectedMovie, movie) {
+        
+        let array = []
+        for (let i = 0; i <selectedMovie.length; i++) {
+            if (selectedMovie[i].value === movie.movieTitle) {
+                array.push(i.value)
+            }
+            else {
+                return -1
+            }
+        }
+        linearSearch();
+        // console.log("found " + movie + "in" + selectedMovie) 
+    };
 
     return (
         <div>
             <span>
-                {/* <pre style={{color: "white"}} >{JSON.stringify(props.selectedMovie)}</pre> */}
-                <button type="button" onClick={() => {
-                    props.dispatch({
-                        type: "NOM_MOVIE",
-                        payload: props.movieTitle
-                    });
-                    
+                <button type="button" id="nomBtn" className="btn btn-light nominateBtn"
+                onClick={() => {
+                    if (linearSearch === -1) { //if search is unsuccessful 
+                          props.dispatch({
+                            type: "NOM_MOVIE", //allow nominate movie button clickable
+                            payload: props.movieTitle 
+                        });
+                    }
+                else { //if search is successful and movie has been found
+                    function disableBtn() {
+                        document.getElementById("nomBtn").disabled = true;
+                      }
+                    disableBtn();
+                    function alreadyNom() {
+                        alert("This movie has already been nominated for a Shoppie! Please choose another movie to nominate or remove nomination.");
+                      }
+                      alreadyNom();
                 }} 
-                className="btn btn-light nominateBtn">NOMINATE</button>
-               
+            }
+            >NOMINATE</button>
             </span>
         </div>
         
@@ -31,7 +56,7 @@ function NominateBtn(props) {
 //getState
 function mapStateToProps(state) {
     return {
-        selectedMovie: state.selectedMovie,
+        selectedMovie: state.selectedMovie
     };
 };
 
@@ -40,7 +65,7 @@ function mapStateToProps(state) {
 //dispatch
 function mapDispatchToProps(dispatch) {
     return {
-        dispatch: action.payload,
+        dispatch: dispatch
     };
 }
 
