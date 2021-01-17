@@ -6,7 +6,7 @@ function RemoveBtn(props) {
         <button type="button" onClick={() => {
             props.dispatch({
                 type: "REM_MOVIE",
-                payload: props.movieTitle
+                payload: props.movie
             });
          
         }}  className="btn removeBtn">

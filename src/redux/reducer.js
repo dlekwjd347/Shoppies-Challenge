@@ -1,6 +1,7 @@
 //function will determine changes to a movie's state
 //uses the action it receives to determine this change
 
+import _ from 'lodash';
 const initialState = {
     selectedMovie: []
 };
@@ -14,7 +15,11 @@ function reducer(state = initialState, action) {
             return { ...state, selectedMovie: [...state.selectedMovie, action.payload] };
            
         case "REM_MOVIE":
-                return { ...state, selectedMovie: [...state.selectedMovie, action.payload] };
+            const selectedMovieCopy = [...state.selectedMovie]; 
+            _.remove(selectedMovieCopy, function(movie) {
+                return movie.imdbID === action.payload.imdbID;
+            });
+            return { ...state, selectedMovie: selectedMovieCopy };
         default:
             return state;
     }

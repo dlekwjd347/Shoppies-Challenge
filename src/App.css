@@ -17,8 +17,9 @@ body {
 	
 }
 
-.movieBox {
-	margin: 30px;
+.resultsbody > .movieBox {
+	overflow-x: auto;
+	flex-wrap: nowrap;
 }
 
 /* .overlay {
@@ -39,12 +40,6 @@ h4, h5 {
 
 .moviesHeading {
   font-weight: bold;
-}
-
-.resultsbody {
-	text-align: center;
-	justify-content: center;
-
 }
 
 .formControl {

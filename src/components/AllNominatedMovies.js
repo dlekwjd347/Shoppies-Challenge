@@ -13,17 +13,15 @@ function AllNominatedMovies(props) {
 						<img src={movie.Poster} alt='movie'></img>
 					</div> */}
 					<div className = 'row'>
-						{/* <h4>{movie}</h4>
-						<p>{movie.Year}</p> */}
-						{<RemoveBtn movieTitle={movie.Title} />}
+						<h4>{movie.Title}</h4>
+						<p>{movie.Year}</p>
+						{<RemoveBtn movie={movie} />}
 					</div>
 					
 				</div>
 			))}	
       </div>
-       
     )
-    
 }
 
 function mapStateToProps(state) {
