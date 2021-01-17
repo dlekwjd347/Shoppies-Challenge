@@ -6,6 +6,7 @@ import ShoppiesHeading from './components/ShoppiesHeading';
 import SearchBox from './components/SearchBox';
 import NominateBtn from './components/NominateBtn';
 import RemoveBtn from './components/RemoveBtn';
+import allNominatedMovies from './components/NominatedMovies'
 
 function App() {
 

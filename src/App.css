@@ -101,3 +101,8 @@ img {
 .awardpic {
 	height: 200px;
 }
+
+.allNominatedMovies {
+	border-color: white;
+	border-width: 20px;
+}

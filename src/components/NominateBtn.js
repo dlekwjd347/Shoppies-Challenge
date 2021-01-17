@@ -1,53 +1,61 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function NominateBtn(props) {
     console.log("nominate button is clicked!", props.movieTitle);
-
     //linear seach to determine if target is in selectedMovies array 
     function linearSearch(selectedMovie, movie) {
-        
-        let array = []
-        for (let i = 0; i <selectedMovie.length; i++) {
+        for (let i = 0; i < selectedMovie.length; i++) {
             if (selectedMovie[i].value === movie.movieTitle) {
-                array.push(i.value)
+                // found
+                return i;
             }
-            else {
-                return -1
-            }
-        }
-        linearSearch();
-        // console.log("found " + movie + "in" + selectedMovie) 
-    };
+        } // went through all the list, not found
+        return -1;
+    }
+
+    const getMovieRequest = async (searchValue) => {
+		const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=762eb5d3`;
+
+		const response = await fetch(url);
+		const responseJson = await response.json();
+
+		console.log(responseJson);
+
+  };
+    const notifyAdd = () => toast("Movie Successfully Added to Nominations!");
+
+    const addMovieRequest = async () => {
+        console.log(props.movieTitle);
+        await getMovieRequest(props.movieTitle).then((data) => {
+          console.log(data);
+          return notifyAdd();
+        });
+      };
+      
 
     return (
         <div>
-            <span>
-                <button type="button" id="nomBtn" className="btn btn-light nominateBtn"
+            <button type="button" id="nomBtn" className="btn btn-light nominateBtn"
                 onClick={() => {
-                    if (linearSearch === -1) { //if search is unsuccessful 
-                          props.dispatch({
+                    if (linearSearch(props.selectedMovie, props.movieTitle) ) { //if search is unsuccessful 
+                        props.dispatch({
                             type: "NOM_MOVIE", //allow nominate movie button clickable
-                            payload: props.movieTitle 
+                            payload: props.movieTitle
                         });
                     }
-                else { //if search is successful and movie has been found
-                    function disableBtn() {
-                        document.getElementById("nomBtn").disabled = true;
-                      }
-                    disableBtn();
-                    function alreadyNom() {
-                        alert("This movie has already been nominated for a Shoppie! Please choose another movie to nominate or remove nomination.");
-                      }
-                      alreadyNom();
-                }} 
-            }
-            >NOMINATE</button>
-            </span>
+                    return (<ToastContainer
+                        position="bottom-right"
+                        
+                        />);
+                } 
+                
+                } disabled={linearSearch(props.selectedMovie, props.movieTitle) !== -1}>NOMINATE</button>
         </div>
-        
+
     )
 };
 
