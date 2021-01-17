@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 
 function NominateBtn(props) {
@@ -16,17 +16,7 @@ function NominateBtn(props) {
         } // went through all the list, not found
         return -1;
     }
-
-    const getMovieRequest = async (searchValue) => {
-		const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=762eb5d3`;
-
-		const response = await fetch(url);
-		const responseJson = await response.json();
-
-		console.log(responseJson);
-
-  };
-      
+     
 
     return (
         <div>
