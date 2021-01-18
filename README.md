@@ -50,4 +50,7 @@ The simple to use interface that makes it easy to:
 6. Display a banner when the user has 5 nominations.
 
 ## Deployed Application ##
+
+https://dlekwjd347.github.io/Shoppies-Shopify-Challenge/
+
 ![alt text](public\shopifydemo.gif)
