@@ -15,7 +15,11 @@ function AllNominatedMovies(props) {
 					<div className = 'row'>
 						<h4>{movie.Title}</h4>
 						<p>{movie.Year}</p>
-						{<RemoveBtn movie={movie} />}
+            <div className='row'>
+            {<RemoveBtn movie={movie} />}
+            </div>
+
+						
 					</div>
 					
 				</div>

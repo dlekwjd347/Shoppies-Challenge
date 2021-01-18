@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Repository & Commit Explorer for GitHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Author: Elizabeth Lee e.lee7091@gmail.com
 
-## Available Scripts
+## Prerequisite
 
-In the project directory, you can run:
+Ensure you have the recent version of Node.js & NPM installed.
 
-### `yarn start`
+Ensure you have the recent version of [Node.js & NPM](https://nodejs.org/en/download/) installed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Recommended
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Also, install `yarn` by running
 
-### `yarn test`
+```
+npm i -g yarn
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `yarn build`
+Initialize your workspace by running:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**The Shoppies: Movie awards for entrepreneurs**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Shopify has branched out into movie award shows and this app to helps manage movie nominations for the upcoming Shoppies.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## The App
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The webpage can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The simple to use interface that makes it easy to:
+* Search OMDB and display the results (movies only)
+* * Add a movie from the search results to our nomination list
+* View the list of films already nominated
+* Remove a nominee from the nomination list
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Technical requirements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
+2. Each search result should list at least its title, year of release and a button to nominate that film.
+3. Updates to the search terms should update the result list
+4. Movies in search results can be added and removed from the nomination list.
+5. If a search result has already been nominated, disable its nominate button.
+6. Display a banner when the user has 5 nominations.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deployed Application ##
+![alt text](public\shopifydemo.gif)
