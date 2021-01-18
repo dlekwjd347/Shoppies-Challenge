@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.48fc8bdd.chunk.css",
-    "main.js": "/static/js/main.94aff840.chunk.js",
-    "main.js.map": "/static/js/main.94aff840.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.8dd33a88.js",
-    "runtime-main.js.map": "/static/js/runtime-main.8dd33a88.js.map",
-    "static/css/2.ae9f1eb3.chunk.css": "/static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.574fc2eb.chunk.js": "/static/js/2.574fc2eb.chunk.js",
-    "static/js/2.574fc2eb.chunk.js.map": "/static/js/2.574fc2eb.chunk.js.map",
-    "static/js/3.2169bb8e.chunk.js": "/static/js/3.2169bb8e.chunk.js",
-    "static/js/3.2169bb8e.chunk.js.map": "/static/js/3.2169bb8e.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.ae9f1eb3.chunk.css.map": "/static/css/2.ae9f1eb3.chunk.css.map",
-    "static/css/main.48fc8bdd.chunk.css.map": "/static/css/main.48fc8bdd.chunk.css.map",
-    "static/js/2.574fc2eb.chunk.js.LICENSE.txt": "/static/js/2.574fc2eb.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/white-popcorn.1cba57f5.svg"
+    "main.css": "/Shoppies-Shopify-Challenge/static/css/main.eadc1f32.chunk.css",
+    "main.js": "/Shoppies-Shopify-Challenge/static/js/main.94aff840.chunk.js",
+    "main.js.map": "/Shoppies-Shopify-Challenge/static/js/main.94aff840.chunk.js.map",
+    "runtime-main.js": "/Shoppies-Shopify-Challenge/static/js/runtime-main.2f09cd95.js",
+    "runtime-main.js.map": "/Shoppies-Shopify-Challenge/static/js/runtime-main.2f09cd95.js.map",
+    "static/css/2.ae9f1eb3.chunk.css": "/Shoppies-Shopify-Challenge/static/css/2.ae9f1eb3.chunk.css",
+    "static/js/2.574fc2eb.chunk.js": "/Shoppies-Shopify-Challenge/static/js/2.574fc2eb.chunk.js",
+    "static/js/2.574fc2eb.chunk.js.map": "/Shoppies-Shopify-Challenge/static/js/2.574fc2eb.chunk.js.map",
+    "static/js/3.2169bb8e.chunk.js": "/Shoppies-Shopify-Challenge/static/js/3.2169bb8e.chunk.js",
+    "static/js/3.2169bb8e.chunk.js.map": "/Shoppies-Shopify-Challenge/static/js/3.2169bb8e.chunk.js.map",
+    "index.html": "/Shoppies-Shopify-Challenge/index.html",
+    "static/css/2.ae9f1eb3.chunk.css.map": "/Shoppies-Shopify-Challenge/static/css/2.ae9f1eb3.chunk.css.map",
+    "static/css/main.eadc1f32.chunk.css.map": "/Shoppies-Shopify-Challenge/static/css/main.eadc1f32.chunk.css.map",
+    "static/js/2.574fc2eb.chunk.js.LICENSE.txt": "/Shoppies-Shopify-Challenge/static/js/2.574fc2eb.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Shoppies-Shopify-Challenge/static/media/white-popcorn.1cba57f5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8dd33a88.js",
+    "static/js/runtime-main.2f09cd95.js",
     "static/css/2.ae9f1eb3.chunk.css",
     "static/js/2.574fc2eb.chunk.js",
-    "static/css/main.48fc8bdd.chunk.css",
+    "static/css/main.eadc1f32.chunk.css",
     "static/js/main.94aff840.chunk.js"
   ]
 }
