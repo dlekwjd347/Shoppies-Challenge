@@ -2,8 +2,6 @@
 body {
   background: white;
   color: black;
-  font-family: 'Nunito', sans-serif;
-  
 }
 
 .image-container {
@@ -20,7 +18,27 @@ body {
 .resultsbody  {
 	overflow-x: auto;
 	flex-wrap: nowrap;
+	margin-top: 5vh;
 } 
+
+.shoppiesHead {
+	height:40px;
+	font-family: 'Old Standard TT', serif;
+	font-style: italic;
+	background: url(./assets/popcorn.svg);
+	background-repeat: no-repeat;
+	line-height: 100%;
+	
+}
+
+h1 {
+	margin-left: 30px;
+	display: block;
+}
+.nomHeading {
+	margin-left: 10px;
+	font-style: italic;
+}
 
 h4, h5 {
   color: black;

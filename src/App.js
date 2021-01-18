@@ -3,11 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MovieResults from './components/MovieResults';
 import ShoppiesHeading from './components/ShoppiesHeading';
+import NomHeading from './components/NomHeading'
 import SearchBox from './components/SearchBox';
 import NominateBtn from './components/NominateBtn';
 import RemoveBtn from './components/RemoveBtn';
 import AllNominatedMovies from './components/AllNominatedMovies';
 import Banner from './components/Banner';
+
 
 function App() {
 
@@ -52,7 +54,7 @@ function App() {
 	  
     <div className='container-fluid'>
 			<div className='row d-flex align-items-center mt-4 mb-4 moviesHeading'>
-				<ShoppiesHeading heading='The Shoppies' /> 
+				<ShoppiesHeading heading='THE SHOPPIES' /> 
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 				<Banner />
 			</div>
@@ -73,8 +75,8 @@ function App() {
 			<MovieResults
 					movies={nominees}
 				/>
-			<div className='row'>
-			<ShoppiesHeading heading='Nominees' />
+			<div className='row d-flex mt-4 mb-4'>
+			<NomHeading heading='Nominees' />
 				<AllNominatedMovies 
 				RemoveBtnComponent={RemoveBtn}/>
 			</div>
