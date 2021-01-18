@@ -9,7 +9,7 @@ import NominateBtn from './components/NominateBtn';
 import RemoveBtn from './components/RemoveBtn';
 import AllNominatedMovies from './components/AllNominatedMovies';
 import Banner from './components/Banner';
-
+import Toggle from './components/Toggle';
 
 function App() {
 
@@ -17,6 +17,11 @@ function App() {
   const [searchValue, setSearchValue] = useState('');
   const [nominees, setNominees] = useState([]);
 
+  const [toggled, setToggled] = React.useState(false);
+    const handleClick = () => {
+        setToggled((s) => !s);
+	};
+	
   const getMovieRequest = async (searchValue) => {
 		const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=762eb5d3`;
 
@@ -53,6 +58,9 @@ function App() {
   return (
 	  
     <div className='container-fluid'>
+		<div>
+		<Toggle toggled={toggled} onClick={handleClick} />
+		</div>
 			<div className='row d-flex align-items-center mt-4 mb-4 moviesHeading'>
 				<ShoppiesHeading heading='THE SHOPPIES' /> 
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />

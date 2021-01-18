@@ -123,3 +123,36 @@ img {
 	justify-content: center;
 	align-items: center;
 }
+
+.toggle {
+	height: 30px;
+    width: 50px;
+    border-radius: 50px;
+    margin: auto;
+    background-image: linear-gradient(aqua, skyblue);
+    position: relative;
+    cursor: pointer;
+}
+
+.notch {
+	height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    box-shadow: 0 0 5px yellow;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.toggle.night {
+    background-image: linear-gradient(midnightblue, rebeccapurple);
+}
+
+.night > .notch {
+    background: whitesmoke;
+    box-shadow: 0 0 5px whitesmoke;
+    transform: translate(18px, 0);
+}
