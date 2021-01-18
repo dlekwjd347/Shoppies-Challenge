@@ -85,16 +85,26 @@ function App() {
 
 		<div className={toggled ? "dark-mode" : "light-mode"}>
 			<div className='container-fluid'>
-			<span style={{ color: toggled ? "grey" : "yellow" }}>☀︎</span>
-            <input
+				<div className="appToggle">
+				<span style={{ color: toggled ? "grey" : "yellow" }}>☀︎</span>
+			<label class="label" for="checkbox">
+				<div class="labelToggle">
+					<input
               checked={toggled}
               onChange={() => setToggle(prevMode => !prevMode)}
               id="checkbox"
-              className="checkbox"
-              type="checkbox"
+              className="toggle-state"
+			  type="checkbox"
+			  name="check"
+			  value="check"
             />
-            <span style={{ color: toggled ? "white" : "white" }}>☾</span>
+			<div className="indicator"></div>
+			</div>
+			</label>
+            <span className="moonToggle" style={{ color: toggled ? "white" : "white" }}>🌙</span>
            
+				</div>
+		
 			<div>
 				<Toggle />
 			</div>

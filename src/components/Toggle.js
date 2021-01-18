@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Toggle({ onClick }) {
+function Toggle() {
 
     const [toggled, setToggle] = React.useState(getInitialMode());
     React.useEffect(() => {
@@ -30,7 +30,7 @@ function Toggle({ onClick }) {
         return window.matchMedia("(prefers-color-scheme: dark)").matches;
       }
     return (
-        <div>        </div>
+        <div className=""></div>
     )
 }
 
