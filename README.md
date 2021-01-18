@@ -53,4 +53,4 @@ The simple to use interface that makes it easy to:
 
 https://dlekwjd347.github.io/Shoppies-Shopify-Challenge/
 
-![alt text](public\shopifydemo.gif)
+![alt text](https://github.com/dlekwjd347/Shoppies-Shopify-Challenge/blob/main/public/shopifydemo.gif)
