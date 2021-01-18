@@ -80,10 +80,11 @@ function App() {
 	};
 
 	return (
-<div className='container-fluid'>
+
 
 
 		<div className={toggled ? "dark-mode" : "light-mode"}>
+			<div className='container-fluid'>
 			<span style={{ color: toggled ? "grey" : "yellow" }}>☀︎</span>
             <input
               checked={toggled}
@@ -92,7 +93,7 @@ function App() {
               className="checkbox"
               type="checkbox"
             />
-            <span style={{ color: toggled ? "slateblue" : "grey" }}>☾</span>
+            <span style={{ color: toggled ? "white" : "white" }}>☾</span>
            
 			<div>
 				<Toggle />

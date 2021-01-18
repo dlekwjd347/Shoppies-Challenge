@@ -127,5 +127,20 @@ img {
 }
 .dark-mode {
 	background-color: #1a1919;
-	color: #999;
+	color: white;
+	height: 100vh;
   }
+
+.dark-mode .formControl {
+	border-bottom: 3px solid white;
+}
+
+.dark-mode .shoppiesHead {
+	height:40px;
+	font-family: 'Old Standard TT', serif;
+	font-style: italic;
+	background: url(./assets/white-popcorn.svg);
+	background-repeat: no-repeat;
+	line-height: 100%;
+	
+}
