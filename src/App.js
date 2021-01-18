@@ -13,16 +13,40 @@ import Toggle from './components/Toggle';
 
 function App() {
 
-  const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
-  const [nominees, setNominees] = useState([]);
+	const [movies, setMovies] = useState([]);
+	const [searchValue, setSearchValue] = useState('');
+	const [nominees, setNominees] = useState([]);
 
-  const [toggled, setToggled] = React.useState(false);
-    const handleClick = () => {
-        setToggled((s) => !s);
-	};
 	
-  const getMovieRequest = async (searchValue) => {
+    const [toggled, setToggle] = React.useState(getInitialMode());
+    React.useEffect(() => {
+		localStorage.setItem("dark", JSON.stringify(toggled));
+	  }, [toggled]);
+
+	  function getInitialMode() {
+        const isReturningUser = "dark" in localStorage;
+        const savedMode = JSON.parse(localStorage.getItem("dark"));
+        const userPrefersDark = getPrefColorScheme();
+        // if mode was saved --> dark / light
+        if (isReturningUser) {
+          return savedMode;
+          // if preferred color scheme is dark --> dark
+        } else if (userPrefersDark) {
+          return true;
+          // otherwise --> light
+        } else {
+          return false;
+        }
+        // return savedMode || false;
+      }
+
+      function getPrefColorScheme() {
+        if (!window.matchMedia) return;
+    
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
+      }
+
+	const getMovieRequest = async (searchValue) => {
 		const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=762eb5d3`;
 
 		const response = await fetch(url);
@@ -33,9 +57,9 @@ function App() {
 		if (responseJson.Search) {
 			setMovies(responseJson.Search);
 		}
-  };
-  
-  useEffect(() => {
+	};
+
+	useEffect(() => {
 		getMovieRequest(searchValue);
 	}, [searchValue]);
 
@@ -52,49 +76,61 @@ function App() {
 	const addNominatedMovie = (movie) => {
 		const newNominatedList = [...nominees, movie];
 		setNominees(newNominatedList);
-		
+
 	};
 
-  return (
-	  
-    <div className='container-fluid'>
-		<div>
-		<Toggle toggled={toggled} onClick={handleClick} />
-		</div>
+	return (
+<div className='container-fluid'>
+
+
+		<div className={toggled ? "dark-mode" : "light-mode"}>
+			<span style={{ color: toggled ? "grey" : "yellow" }}>☀︎</span>
+            <input
+              checked={toggled}
+              onChange={() => setToggle(prevMode => !prevMode)}
+              id="checkbox"
+              className="checkbox"
+              type="checkbox"
+            />
+            <span style={{ color: toggled ? "slateblue" : "grey" }}>☾</span>
+           
+			<div>
+				<Toggle />
+			</div>
 			<div className='row d-flex align-items-center mt-4 mb-4 moviesHeading'>
-				<ShoppiesHeading heading='THE SHOPPIES' /> 
+				<ShoppiesHeading heading='THE SHOPPIES' />
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 				<Banner />
 			</div>
 			<div>
-				
+
 			</div>
 			<div className='row'>
-			
+
 				<MovieResults
 					movies={movies}
 					handlenominateClick={addNominatedMovie}
 					NominateBtnComponent={NominateBtn}
-					
+
 				/>
-			
+
 			</div>
 			<div className='row d-flex mt-4 mb-4'>
-			<MovieResults
+				<MovieResults
 					movies={nominees}
 				/>
-			<div className='row d-flex mt-4 mb-4'>
-			<NomHeading heading='Nominees' />
-				<AllNominatedMovies 
-				RemoveBtnComponent={RemoveBtn}/>
-			</div>
-			
+				<div className='row d-flex mt-4 mb-4'>
+					<NomHeading heading='Nominees' />
+					<AllNominatedMovies
+						RemoveBtnComponent={RemoveBtn} />
+				</div>
+
 
 			</div>
 		</div>
-  );
+		</div>
+	);
 
 }
 
 export default App;
- 
